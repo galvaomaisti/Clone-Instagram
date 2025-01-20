@@ -2,30 +2,44 @@
 * {
     padding: 0;
     margin: 0;
-    background: white;
+    background: rgb(255, 255, 255);
     box-sizing: border-box;
 }
 
 .box-imagens-finais {
     text-align: center;
     margin-top: 20px;
+    position: relative;
 }
 
 .box-imagens-finais img {
-    margin: 0 10px;
-    margin-inline-end: 15px;
-   }
+    width: 100%;
+    height: 30px;
+    margin: 10px;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+}
+
+.box-imagens {
+    position: relative;
+}
 
 /* Estilo para a imagem do celular */
 .imagem-celular {
-    width: 520px;
+    border: none;
+    width: 450px;
 }
 
-/* Estilo para o logo da Microsoft */
-.microsoft-logo {
-    width: 100px;
+.imagem-insta {
+    height: 520px;
+    position: absolute;
+    left: 152px;
+    top: 26px;
+    border: 5px;
     border-radius: 5px;
 }
+
 
 /* Estilo para o formulário */
 .box-form {
@@ -35,18 +49,21 @@
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
+    top: -350px;
+
 }
 
 /* Estilo para a seção de lojas */
 .box-lojas {
-   width: 350px;
-   margin-bottom: 15px;
-   margin-top: 10px;
-   display: flex;
-   flex-direction: column;
-   align-items: end;
-   border: 1px solid #140404;
-   border-radius: 5px;
+    width: 350px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border: 1px solid #140404;
+    border-radius: 5px;
+
 }
 
 body {
@@ -87,7 +104,7 @@ button {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .esqueceu-senha {
@@ -106,7 +123,8 @@ button {
     margin-top: 25px;
     border-radius: 5px;
     margin-bottom: 20px;
-} 
+    border-radius: 5px;
+}
 
 .Cadastrar {
     margin-top: 25px;
@@ -117,6 +135,10 @@ button {
     margin-top: 10px;
     margin-bottom: 5px;
     text-align: center;
+    position: absolute;
+    left: -3px;
+    top: 20px;
+
 }
 
 /* Estilos para dispositivos móveis */
@@ -125,7 +147,8 @@ button {
         display: none;
     }
 
-    .box-form, .box-lojas {
+    .box-form,
+    .box-lojas {
         width: 90%;
         padding: 20px;
         margin: 10px;
@@ -136,98 +159,23 @@ button {
         margin: 0 auto 20px;
     }
 
-    input, button {
+    input,
+    button {
         width: 100%;
         margin: 10px 0;
     }
 
-    .google-logo, .ios-logo, .microsoft-logo {
+    /* Estilo para os logos da Microsoft, Ios, Google */
+    .google-logo,
+    .ios-logo,
+    .microsoft-logo {
         width: 30%;
         margin: 0 5px;
+        height: 30px;
+        margin-top: 25px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+
     }
-}
-
-/* Estilo para os logos na seção de aplicativos */
-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-section div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.google-logo, .ios-logo, .microsoft-logo {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    margin: 0 10px; /* Espaçamento uniforme entre os logos */
-}
-
-/* Estilo para a nova seção de imagens no final da página */
-.box-imagens-finais {
-    text-align: center;
-    margin-top: 20px;
-   
-}
-
-.box-imagens-finais img {
-    margin: 0 10px;
-}
-
-/* Ajuste para dispositivos móveis */
-@media (max-width: 600px) {
-    .google-logo, .ios-logo, .microsoft-logo {
-        width: 70px; /* Ajuste do tamanho para telas menores */
-        margin: 0 5px; /* Menor espaçamento entre os logos */
-    }
-}
-
-/* Slideshow container */
-.celular-container {
-    position: relative;
-    width: 520px; /* Largura da imagem do celular */
-    height: auto;
-}
-
-.slideshow-container {
-    position: absolute;
-    top: 50px; /* Ajuste a posição conforme necessário */
-    left: 100px; /* Ajuste a posição conforme necessário */
-    width: 320px; /* Largura do slideshow dentro da tela do celular */
-    height: 540px; /* Altura do slideshow dentro da tela do celular */
-    overflow: hidden;
-}
-
-.slideshow-container .mySlides {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.slideshow-container .mySlides img {
-    width: 100%;
-    height: auto;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-.Cadastrar a {
-    color: #3b7e98; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* Negrito */
-}
-
-.Cadastrar a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-    cursor: pointer;
 }
