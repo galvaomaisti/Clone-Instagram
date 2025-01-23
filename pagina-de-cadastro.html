@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> G - Instante </title>
+    <title>G - Instante | Cadastro</title>
     <link rel="stylesheet" href="Style.css">
 </head>
-
 <body>
     <div class="box-imagens">
         <div class="celular-container">
@@ -19,52 +17,37 @@
 
     <div class="box-form">
         <img src="img/insta-logo.png" class="insta-logo">
-        <input placeholder="Telefone, nome de usuário ou e-mail" type="text" id="search" name="search" />
-        <input placeholder="Senha" type="password" id="password" name="password" />
-        <button onclick="location.href='index.html'">Entrar</button>
-
-        <!-- Botão Entrar -->
-        <a href="          "         class="esqueceu-senha"> Esqueceu sua senha?</a>
-
-        <!-- Login com Facebook -->
-        <a href="https://encurtador.com.br/5oLpA " class="login-facebook">Entrar com Facebook</a>
-
-
+        <form action="processa-cadastro.php" method="POST">
+            <input placeholder="Nome Completo" type="text" name="nome" required>
+            <input placeholder="Nome de Usuário" type="text" name="usuario" required>
+            <input placeholder="E-mail" type="email" name="email" required>
+            <input placeholder="Senha" type="password" name="senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
         <div>
-            <p class="Cadastrar"> Não tem uma conta? <a href="pagina-de-cadastro.html">Cadastrar</a> </p>
+            <p class="Ja-tem-conta">Já tem uma conta? <a href="index.html">Entrar</a></p>
         </div>
         <div>
             <p class="get-app">Baixe o aplicativo</p>
         </div>
-
         <div class="box-imagens-finais">
-
             <a href="https://encurtador.com.br/sQ4Av" class="link-download">
                 <div class="google-logo">
                     <img src="img/google.png" alt="Google Logo">
                 </div>
             </a>
-            <a href="https://encurtador.com.br/2K7yB " class="link-download">
+            <a href="https://encurtador.com.br/2K7yB" class="link-download">
                 <div class="microsoft-logo">
                     <img src="img/microsoft.png" alt="Microsoft Logo">
                 </div>
             </a>
-
-            <a href=" https://encurtador.com.br/fKaM1" class="link-download">
+            <a href="https://encurtador.com.br/fKaM1" class="link-download">
                 <div class="ios-logo">
                     <img src="img/ios.png" alt="iOS Logo">
                 </div>
             </a>
         </div>
     </div>
-
-    </div>
-
-
-
-
 </body>
-
 <script src="script.js"></script>
-
 </html>

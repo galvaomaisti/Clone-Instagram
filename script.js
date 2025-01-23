@@ -13,15 +13,15 @@
     // setTimeout(showSlides, 2000); // Muda a imagem a cada 2 segundos
 // }
 
-let imagem = document.querySelector(".troca-imagem");
+let imagens = document.querySelectorAll(".troca-imagem");
 
-function trocaImagem(){
-   
-    if(imagem.style.opacity == 0) {
-        imagem.style.opacity = 1 
-    } else {
-        imagem.style.opacity = 0
-    }
-}
-
-setInterval(trocaImagem, 3000)
+imagens.forEach((imagem) => {
+    imagem.style.opacity = "1"; // Inicializa a opacidade para todas as imagens
+    setInterval(() => {
+        if(imagem.style.opacity == "0") {
+            imagem.style.opacity = "1";
+        } else {
+            imagem.style.opacity = "0";
+        }
+    }, 3000);
+});
