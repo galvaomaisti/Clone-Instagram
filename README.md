@@ -1,5 +1,5 @@
 # Clone-Instagram
-br
+<br>
 Um projeto desenvolvido no DevClub para criar um clone da interface de login do Instagram utilizando HTML, CSS e JavaScript.
 
 📚 Sobre o projeto
